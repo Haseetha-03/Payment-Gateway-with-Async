@@ -2,7 +2,7 @@ import pg from 'pg';
 const { Pool } = pg;
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://gateway_user:Dhanasiri.18@localhost:5432/payment_gateway',
+  connectionString: process.env.DATABASE_URL || 'postgresql://gateway_user:gateway_pass@postgres:5432/payment_gateway',
 });
 
 export const query = (text, params) => pool.query(text, params);
